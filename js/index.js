@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 
 var player = {
-  level: 1,
+  level: 10,
   gold: 0,
   experience: 0,
   summons: 30,
