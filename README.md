@@ -1,5 +1,5 @@
 # LOOT-RPG-v1.0
-Kill bosses, get LOOT!
+Kill bosses, get LOOT!!
 
 This is my first game made in Javacsript, jquery and bootstrap. It took me about a week or two I think, it taught me a lot about
 naming variables, keeping a clean code and how to navigate through a lot of code!
