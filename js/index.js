@@ -4,8 +4,8 @@ $(document).ready(function() {
 
 
 var player = {
-  level: 10,
-  gold: 0,
+  level: 30,
+  gold: 50,
   experience: 0,
   summons: 30,
   summonbosscounter: 0,
@@ -101,7 +101,7 @@ var player = {
 
 
 
-var Health = 200*player.level + player.buffHealth + player.totalHealth - player.nerfHealth;
+var Health = 2000*player.level + player.buffHealth + player.totalHealth - player.nerfHealth;
 var Mana = 100*player.level + player.buffMana + player.totalMana - player.nerfMana;
 var Dodge = 5*player.level + player.buffDodge + player.totalDodge - player.nerfDodge;
 var MagicPow = 10*player.level + player.buffMagicPow + player.totalMagicPow - player.nerfMagicPow;
