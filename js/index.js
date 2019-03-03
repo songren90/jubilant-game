@@ -1609,7 +1609,7 @@ if (player.summons > 0 && battle != true ) {
   $("#rightinfo").empty();
   $("#leftinfo").prepend("<p>Fight is starting.</p>");
 
-player.summons--;
+// player.summons--; so number of summons does not got down
 setTimeout(startfight,5000);
 }}
 startfightonclick();
