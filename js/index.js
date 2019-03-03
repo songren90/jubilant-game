@@ -7,7 +7,7 @@ var player = {
   level: 1,
   gold: 0,
   experience: 0,
-  summons: 30,
+  summons: 3000,
   summonbosscounter: 0,
   summoninterval: 10000,
 
