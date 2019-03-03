@@ -4,8 +4,8 @@ $(document).ready(function() {
 
 
 var player = {
-  level: 30,
-  gold: 50,
+  level: 1,
+  gold: 0,
   experience: 0,
   summons: 30,
   summonbosscounter: 0,
@@ -101,7 +101,7 @@ var player = {
 
 
 
-var Health = 2000*player.level + player.buffHealth + player.totalHealth - player.nerfHealth;
+var Health = 200*player.level + player.buffHealth + player.totalHealth - player.nerfHealth;
 var Mana = 100*player.level + player.buffMana + player.totalMana - player.nerfMana;
 var Dodge = 5*player.level + player.buffDodge + player.totalDodge - player.nerfDodge;
 var MagicPow = 10*player.level + player.buffMagicPow + player.totalMagicPow - player.nerfMagicPow;
@@ -503,18 +503,18 @@ function updatespells(){
       namefunction: "shadowbolt",
       nameid: "#shadowbolt",
       damage: Math.floor(Damage/2 + ShadowDMG + MagicPow/2) ,
-      manacost: boss.level * 15,
+      manacost: boss.level * 1,
       healthcost: 0,
       manarestore: 0,
       healthrestore: 0,
       repeat: 0,
-      delay: 2000,
+      delay: 200,
       buffname: 0,
       buffamount: 0,
-      cooldown: 5000,
-    },
+      cooldown: 50,
+   },
 
-
+    
     bloodstrike: {
       nameplayer: "Bloodstrike",
       namefunction: "bloodstrike",
