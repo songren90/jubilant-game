@@ -1171,7 +1171,7 @@ $("#bosssummons").text(fightcount);
 // easy leveling function
 function checkexp(){
 
-  if (player.experience > 3 * player.level){
+  if (player.experience > 2 * player.level){
     player.experience=0;
     player.level++;
   }
@@ -1392,7 +1392,7 @@ function startfight(){
       currentplayermana = Mana;
       currentplayerhealth = Health;
       updatehealthbar();
-      player.experience++;
+      player.experience = player.experience + 50;
      }
 
     if (currentplayerhealth < 1) {
