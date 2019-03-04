@@ -4,9 +4,9 @@ $(document).ready(function() {
 
 
 var player = {
-  level: 1,
+  level: 1000,
   gold: 0,
-  experience: 0,
+  experience: 8000,
   summons: 3000,
   summonbosscounter: 0,
   summoninterval: 10000,
@@ -1132,7 +1132,8 @@ function createitem() {
       itemidcount = "#" + invcount;
       itemid = itemidcount + "S";
       if (jQuery.isEmptyObject(inventory[invcount])) {
-        allclasses = "item sprite " + generateditem.icon + " " + generateditem.rarity;
+        allclasses = "item 
+         " + generateditem.icon + " " + generateditem.rarity;
         $(itemidcount).append("<img id='" + itemid + "'class='" + allclasses + "' '></img>");
         f = 50;
         inventory[invcount] = generateditem;
