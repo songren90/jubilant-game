@@ -1132,8 +1132,7 @@ function createitem() {
       itemidcount = "#" + invcount;
       itemid = itemidcount + "S";
       if (jQuery.isEmptyObject(inventory[invcount])) {
-        allclasses = "item 
-         " + generateditem.icon + " " + generateditem.rarity;
+        allclasses = "item" + generateditem.icon + " " + generateditem.rarity;
         $(itemidcount).append("<img id='" + itemid + "'class='" + allclasses + "' '></img>");
         f = 50;
         inventory[invcount] = generateditem;
