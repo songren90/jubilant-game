@@ -1631,7 +1631,7 @@ $(".slot").click(function() {
 
   for (var y = 0; y < affixes.length; y++) {
     var statstuff = inventory[clickeditemid]["stats"][affixes[y][0]];
-    var upgradestatstuff = inventory[clickeditemid][upgrade][stats[affixes[y][0]];
+    var upgradestatstuff = inventory[clickeditemid][upgrade][stats[affixes[y][0]]];
     rarityarr.push(inventory[clickeditemid]["upgrade"]["stats"][affixes[y][0]][2] );
     rarityarr.push(inventory[clickeditemid]["stats"][affixes[y][0]][2] );
 
