@@ -4,12 +4,12 @@ $(document).ready(function() {
 
 
 var player = {
-  level: 1000,
+  level: 1,
   gold: 0,
-  experience: 8000,
+  experience: 0,
   summons: 3000,
   summonbosscounter: 0,
-  summoninterval: 10000,
+  summoninterval: 10,
 
   head: {},
   chest: {},
@@ -266,7 +266,7 @@ var itemslotnames = ["Talisman", "Helmet", "Ring", "Shoulders", "Chestplate", "B
 var slotplayernames = ["talisman", "head", "ring", "shoulder", "chest", "book", "wrist", "leg", "glove", "weapon", "boot", "necklace"];
 var itemslot = 0;
 var generateditem = {};
-var rarities = ["Common", "Magic", "Rare", "Epic", "Legendary"];
+var rarities = ["Fighter", "Champion", "Psychic", "Mage", "Grand Wizard"];
 var affixnumber = "";
 var itemrarity;
 var currentitemid = "";
@@ -1106,18 +1106,18 @@ function createitem() {
       var statnumber = Math.floor(Math.random() * (affixes[randomstat][1] + (affixes[randomstat][2] * boss.level)));
       var statmax = affixes[randomstat][1] + (affixes[randomstat][2] * boss.level);
 
-      var statcolor = "Common";
+      var statcolor = "Fighter";
       if (statnumber > statmax * 0.2) {
-        statcolor = "Magic"
+        statcolor = "Champion"
       };
       if (statnumber > statmax * 0.4) {
-        statcolor = "Rare"
+        statcolor = "Psychic"
       };
       if (statnumber > statmax * 0.6) {
-        statcolor = "Epic"
+        statcolor = "Mage"
       };
       if (statnumber > statmax * 0.8) {
-        statcolor = "Legendary"
+        statcolor = "Grand Wizard"
       };
 
       //we finalize the item stats here
@@ -1631,7 +1631,7 @@ $(".slot").click(function() {
 
   for (var y = 0; y < affixes.length; y++) {
     var statstuff = inventory[clickeditemid]["stats"][affixes[y][0]];
-    var upgradestatstuff = inventory[clickeditemid]["upgrade"]["stats"][affixes[y][0]];
+    var upgradestatstuff = inventory.clickeditemid.upgrade.stats[affixes[y][0]];
     rarityarr.push(inventory[clickeditemid]["upgrade"]["stats"][affixes[y][0]][2] );
     rarityarr.push(inventory[clickeditemid]["stats"][affixes[y][0]][2] );
 
@@ -1663,11 +1663,11 @@ $(".slot").click(function() {
 
     var totalperc = 0;
     for (var i=0; i<rarityarr.length;i++){
-      if (rarityarr[i] === "Common"){totalperc = totalperc + 1;}
-      if (rarityarr[i] === "Magic"){totalperc = totalperc + 2;}
-      if (rarityarr[i] === "Rare"){totalperc = totalperc + 3;}
-      if (rarityarr[i] === "Epic"){totalperc = totalperc + 4;}
-      if (rarityarr[i] === "Legendary"){totalperc = totalperc + 5;}
+      if (rarityarr[i] === "Fighter"){totalperc = totalperc + 1;}
+      if (rarityarr[i] === "Champion"){totalperc = totalperc + 2;}
+      if (rarityarr[i] === "Psychic"){totalperc = totalperc + 3;}
+      if (rarityarr[i] === "Mage"){totalperc = totalperc + 4;}
+      if (rarityarr[i] === "Grand Wizard"){totalperc = totalperc + 5;}
     }
 
     totalperc = Math.floor(totalperc / 45 * 100)+"%";
@@ -1720,11 +1720,11 @@ $(".slot1").click(function() {
 
   var totalperc = 0;
   for (var i=0; i<rarityarr.length;i++){
-    if (rarityarr[i] === "Common"){totalperc = totalperc + 1;}
-    if (rarityarr[i] === "Magic"){totalperc = totalperc + 2;}
-    if (rarityarr[i] === "Rare"){totalperc = totalperc + 3;}
-    if (rarityarr[i] === "Epic"){totalperc = totalperc + 4;}
-    if (rarityarr[i] === "Legendary"){totalperc = totalperc + 5;}
+    if (rarityarr[i] === "Fighter"){totalperc = totalperc + 1;}
+    if (rarityarr[i] === "Champion"){totalperc = totalperc + 2;}
+    if (rarityarr[i] === "Psychic"){totalperc = totalperc + 3;}
+    if (rarityarr[i] === "Mage"){totalperc = totalperc + 4;}
+    if (rarityarr[i] === "Grand Wizard"){totalperc = totalperc + 5;}
   }
 
   totalperc = Math.floor(totalperc / 45 * 100)+"%";

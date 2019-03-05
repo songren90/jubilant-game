@@ -79,27 +79,27 @@ position:absolute;
   background-color:#24303E;
 }
 
-.Common {
+.Fighter {
   border-color: #ffffff;
   color: #ffffff;
 }
 
-.Magic {
+.Champion {
   border-color: #1eff00;
   color: #1eff00;
 }
 
-.Rare {
+.Psychic {
   border-color: #0070dd;
   color: #0070dd;
 }
 
-.Epic {
+.Mage {
   border-color: #a335ee;
   color: #a335ee;
 }
 
-.Legendary {
+.Grand Wizard {
   border-color: #ff8000;
   color: #ff8000;
 }
