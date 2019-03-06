@@ -1391,7 +1391,7 @@ function startfight(){
       currentplayermana = Mana;
       currentplayerhealth = Health;
       updatehealthbar();
-      player.experience = player.experience + 50;
+      player.experience = player.experience + 1;
      }
 
     if (currentplayerhealth < 1) {
