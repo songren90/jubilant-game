@@ -7,9 +7,9 @@ var player = {
   level: 1,
   gold: 0,
   experience: 0,
-  summons: 3000,
+  summons: 10,
   summonbosscounter: 0,
-  summoninterval: 10,
+  summoninterval: 10000,
 
   head: {},
   chest: {},
@@ -1163,8 +1163,7 @@ if (player.summonbosscounter > 5){
 player.summonbosscounter=0;
 player.summons++;
 var fightcount = "Boss Summons: " + player.summons;
-$("#bosssummons").text(fightcount);
-}
+$("#bosssummons").text(fightcount);}
 
 }
 
@@ -1631,7 +1630,7 @@ $(".slot").click(function() {
 
   for (var y = 0; y < affixes.length; y++) {
     var statstuff = inventory[clickeditemid]["stats"][affixes[y][0]];
-    var upgradestatstuff = inventory[clickeditemid][upgrade][stats[affixes[y][0]]]
+    var upgradestatstuff = inventory[clickeditemid]["upgrade"]["stats"][affixes[y][0]]
     rarityarr.push(inventory[clickeditemid]["upgrade"]["stats"][affixes[y][0]][2] );
     rarityarr.push(inventory[clickeditemid]["stats"][affixes[y][0]][2] );
 
