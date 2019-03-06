@@ -262,8 +262,8 @@ var affixnames = [
   "Woundhealing",
 ];
 var itemname = "";
-var itemslotnames = ["Talisman", "Helmet", "Ring", "Shoulders", "Chestplate", "Book", "Bracelet", "Leggings", "Gloves", "Weapon", "Boots", "Necklace"];
-var slotplayernames = ["talisman", "head", "ring", "shoulder", "chest", "book", "wrist", "leg", "glove", "weapon", "boot", "necklace"];
+var itemslotnames = ["Vampire","Hydra"];
+var slotplayernames = ["vampire", "hydra"];
 var itemslot = 0;
 var generateditem = {};
 var rarities = ["Fighter", "Champion", "Psychic", "Mage", "Grand Wizard"];
@@ -291,18 +291,8 @@ var randomstat;
 var usedstats = [];
 var itempicturenum;
 var iconnumbers = {
-  head: 5,
-  chest: 17,
-  leg: 7,
-  boot: 10,
-  ring: 11,
-  talisman: 23,
-  weapon: 56,
-  wrist: 13,
-  shoulder: 10,
-  book: 11,
-  glove: 11,
-  necklace: 7,
+  vampire: 5,
+  hydra: 17
 }
 
 var inventory = {
@@ -1057,7 +1047,7 @@ upgradeitemonchar();
 function createitem() {
   finishedgenerating = false;
   // choose rarity, slot and affix for item
-  var randomslot = Math.floor(Math.random() * 12) + 1;
+  var randomslot = Math.floor(Math.random() * 2) + 1;
   var randomaffix = Math.floor(Math.random() * affixnames.length);
   var affixnumber = Math.floor(Math.random() * rarities.length) + 1;
   usedstats = [];
@@ -1091,9 +1081,10 @@ function createitem() {
           generateditem.upgrade.stats[affixes[g][0]] = [0,0,0];
         }
 
-        itempicturenum = iconnumbers[itemslot];
-        var randompicturenum = Math.floor(Math.random() * itempicturenum) + 1;
-        generateditem.icon = itemslot.toString() + "-" + randompicturenum.toString();
+        // itempicturenum = iconnumbers[itemslot];
+        // var randompicturenum = Math.floor(Math.random() * itempicturenum) + 1;
+        // generateditem.icon = itemslot.toString() + "-" + randompicturenum.toString();
+        generateditem.icon = itemslotnames[slot - 1].toString();
 
       };
 
@@ -1132,7 +1123,8 @@ function createitem() {
       itemidcount = "#" + invcount;
       itemid = itemidcount + "S";
       if (jQuery.isEmptyObject(inventory[invcount])) {
-        allclasses = "item" + generateditem.icon + " " + generateditem.rarity;
+        // allclasses = "item" + generateditem.icon + " " + generateditem.rarity;
+        allclasses = generateditem.icon;
         $(itemidcount).append("<img id='" + itemid + "'class='" + allclasses + "' '></img>");
         f = 50;
         inventory[invcount] = generateditem;
@@ -1793,7 +1785,7 @@ function reloadeverything(){
       var itemidcount1 = "#" + invcount1;
       var itemid1 = itemidcount1 + "S";
       if (jQuery.isEmptyObject(inventory[invcount1])===false) {
-        var allclasses1 = "item sprite " + inventory[invcount1]["icon"] + " " + inventory[invcount1]['rarity'];
+        var allclasses1 = "item my-sprite " + inventory[invcount1]["icon"] + " " + inventory[invcount1]['rarity'];
         $(itemidcount1).append("<img id='" + itemid1 + "'class='" + allclasses1 + "' '></img>");
 
       }
@@ -1805,7 +1797,7 @@ function reloadeverything(){
       var newid1="#c"+x;
 
      if (jQuery.isEmptyObject(player[itemslot1])===false) {
-        var allclasses1 = "item sprite " + player[itemslot1]["icon"] + " " + player[itemslot1]['rarity'];
+        var allclasses1 = "item my-sprite " + player[itemslot1]["icon"] + " " + player[itemslot1]['rarity'];
         $(itemid1).append("<img id='" +newid1+ "'class='" + allclasses1 + "' '></img>");
 
       }

@@ -2660,18 +2660,19 @@ table {
 }
 
 .my-sprite {
-  background-image: url("https://res.cloudinary.com/songren/image/upload/v1551854719/spritesheet.png");
+  background-image: url("https://res.cloudinary.com/songren/image/upload/v1551870805/spritesheet_1.png");
   background-repeat: no-repeat;
   display: block;
 }
+
 .hydra {
   width: 48px;
   height: 48px;
-  background-position: -5px -5px;
+  background-position: 0 0;
 }
 
-.resting-vampire {
+.vampire {
   width: 48px;
   height: 48px;
-  background-position: -495px -5px;
+  background-position: -48px 0;
 }
