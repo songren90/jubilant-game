@@ -351,8 +351,8 @@ p {
 
 }
 .item {
-  max-width: 45px;
-  max-height: 45px;
+  /* max-width: 48px; */
+  /* max-height: 48px; */
   border-width: 3.5px;
   border-style: solid;
   vertical-align: middle;
@@ -2665,14 +2665,14 @@ table {
   display: block;
 }
 
-.hydra {
-  width: 48px;
-  height: 48px;
+.Hydra {
+  width: 52px;
+  height: 52px;
   background-position: 0 0;
 }
 
-.vampire {
-  width: 48px;
-  height: 48px;
+.Vampire {
+  width: 52px;
+  height: 52px;
   background-position: -48px 0;
 }
