@@ -2676,3 +2676,53 @@ table {
   height: 52px;
   background-position: -48px 0;
 }
+
+/* "C:\Users\Phil\Desktop\作业2\高级软件设计\icons\char_resized\demon_spritesheet.png" */
+
+.my-second-sprite {
+  background-image: src="file:///C:/Users/Phil/Desktop/作业2/高级软件设计/icons/char_resized/demon_spritesheet.png" ;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.sprite-djinn {
+  width: 42px;
+  height: 42px;
+  background-position: 0 0;
+}
+
+.sprite-fire-demon {
+  width: 42px;
+  height: 42px;
+  background-position: -42px 0;
+}
+
+.sprite-hydra {
+  width: 42px;
+  height: 42px;
+  background-position: 0 -42px;
+}
+
+.sprite-oni {
+  width: 42px;
+  height: 42px;
+  background-position: -42px -42px;
+}
+
+.sprite-reaper {
+  width: 42px;
+  height: 42px;
+  background-position: -84px 0;
+}
+
+.sprite-thor_2 {
+  width: 42px;
+  height: 42px;
+  background-position: -84px -42px;
+}
+
+.sprite-vampire {
+  width: 42px;
+  height: 42px;
+  background-position: 0 -84px;
+}
