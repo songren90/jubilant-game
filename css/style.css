@@ -257,6 +257,18 @@ p {
   background-size: 53px;
 }
 
+.slot2 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #BF942C;
+  width: 53px;
+  height: 53px;
+  /* background-color: gold; */
+  display: fixed;
+  background: url("../images/kong-resized.jpg");
+  background-size: 53px;
+}
+
 .statslot {
   border-width: 1px;
   border-style: solid;

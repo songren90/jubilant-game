@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 
 var player = {
-  level: 1,
+  level: 3,
   gold: 0,
   experience: 0,
   summons: 10,
@@ -23,6 +23,7 @@ var player = {
   shoulder: {},
   book: {},
   glove: {},
+  partyMember: {},
 
   totalHealth: 0,
   totalMana: 0,
@@ -286,7 +287,7 @@ var affixes = [
   ["StormDMG", 10, 10],
   ["HealPow", 7, 7],
   ["Lifesteal",6,6]
-]
+];
 var randomstat;
 var usedstats = [];
 var itempicturenum;
