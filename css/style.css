@@ -165,7 +165,7 @@ position:absolute;
   background-color: #8F5D38;
   display: fixed;
   background: url("http://res.cloudinary.com/treborx555/image/upload/v1472064620/gui_xyicsn.png");
-  background-size: 53px;
+  /* background-size: 53px; */
 }
 
 #showdiv {
@@ -261,12 +261,12 @@ p {
   border-width: 1px;
   border-style: solid;
   border-color: #BF942C;
-  width: 53px;
-  height: 53px;
+  min-width: 53px;
+  min-height: 53px;
   /* background-color: gold; */
   display: fixed;
-  background: url("../images/kong-resized.jpg");
-  background-size: 53px;
+  /* background: url("../images/kong-resized.jpg"); */
+  /* background-size: 53px; */
 }
 
 .statslot {
@@ -363,8 +363,8 @@ p {
 
 }
 .item {
-  /* max-width: 48px; */
-  /* max-height: 48px; */
+  max-width: 48px;
+  max-height: 48px;
   border-width: 3.5px;
   border-style: solid;
   vertical-align: middle;
@@ -392,8 +392,8 @@ body {
 }
 
 table {
-  background-color: #333;
-  border: 10px solid #333;
+  /* background-color: #333; */
+  /* border: 10px solid #333; */
 }
 
 #battle {
@@ -2692,49 +2692,51 @@ table {
 /* "C:\Users\Phil\Desktop\作业2\高级软件设计\icons\char_resized\demon_spritesheet.png" */
 
 .my-second-sprite {
-  background-image: src="file:///C:/Users/Phil/Desktop/作业2/高级软件设计/icons/char_resized/demon_spritesheet.png" ;
+  background-image: url("../images/demon_spritesheet.png") ;
   background-repeat: no-repeat;
   display: block;
 }
 
-.sprite-djinn {
+.djinn {
   width: 42px;
   height: 42px;
   background-position: 0 0;
 }
 
-.sprite-fire-demon {
+.fire-demon {
   width: 42px;
   height: 42px;
   background-position: -42px 0;
 }
 
-.sprite-hydra {
+.hydra-2 {
   width: 42px;
   height: 42px;
   background-position: 0 -42px;
 }
 
-.sprite-oni {
+.oni {
   width: 42px;
   height: 42px;
   background-position: -42px -42px;
 }
 
-.sprite-reaper {
+.reaper {
   width: 42px;
   height: 42px;
   background-position: -84px 0;
 }
 
-.sprite-thor_2 {
+.thor-2 {
   width: 42px;
   height: 42px;
   background-position: -84px -42px;
 }
 
-.sprite-vampire {
+.vampire-2 {
   width: 42px;
   height: 42px;
   background-position: 0 -84px;
 }
+
+
