@@ -262,8 +262,70 @@ var affixnames = [
   "Wisdom",
   "Woundhealing",
 ];
+
+var assistcharacter = {
+  "charid1": {
+    id: 1,
+    name: "Vampire",
+    imgname: 'vampire100',
+    description: "A mighty vampire",
+    assisteffect: "Effect : 20% BloodDMG Increase"
+
+  },
+  "charid2": {
+    id: 2,
+    name: "Hydra",
+    imgname:"hydra100",
+    description: "A mighty hydra",
+    assisteffect: "Effect : 20% BloodDMG Increase"
+
+  },
+  "charid3":{
+    id: 3,
+    name: "Fire Demon",
+    imgname:"fire-demon100",
+    description: "A mighty fire demon",
+    assisteffect: "Effect : 20% BloodDMG Increase"
+
+  },
+  "charid4":{
+    id: 4,
+    name: "Thor",
+    imgname:"thor100",
+    description: "A thunder God",
+    assisteffect: "Effect : 20% BloodDMG Increase"
+
+  },
+  "charid5":{
+    id: 5,
+    name: "Djinn",
+    imgname:"djinn100",
+    description: "A mighty magic genie",
+    assisteffect: "Effect : 20% BloodDMG Increase"
+
+  },
+  "charid6":{
+    id: 6,
+    name: "Reaper",
+    imgname:"reaper100",
+    description: "A mighty reaper",
+    assisteffect: "Effect : 20% BloodDMG Increase"
+
+  },
+  "charid7":{
+    id: 7,
+    name: "Oni",
+    imgname:"oni100",
+    description: "???",
+    assisteffect: "Effect : 20% BloodDMG Increase"
+
+  }
+
+};
 var itemname = "";
+var assistname = "";
 var itemslotnames = ["Vampire","Hydra"];
+var assistslotnames = ["Vampire-2","Hydra-2","Fire-Demon","Thor","Djinn","Reaper","Oni"];
 var slotplayernames = ["vampire", "hydra"];
 var itemslot = 0;
 var generateditem = {};
@@ -1464,6 +1526,27 @@ $(".slot").mousedown(function(e) {
   }
 });
 
+//my extra inventory options
+$(".slot2").mousedown(function(e) {
+  if (e.button == 2) {
+     clickeditemid = this.id;
+     $("#showdiv").css({
+    'display': 'none'
+  });
+   $("#showdiv1").css({
+    'display': 'none'
+  });
+
+    $("#showdiv").css({
+      'top': mouseY,
+      'left': mouseX,
+      'display': 'block'
+    });
+  }
+});
+
+
+
 //inventory options
 $(".spellbar").mousedown(function(e) {
   if (e.button == 2) {
@@ -1667,6 +1750,46 @@ $(".slot").click(function() {
     $("#powerlevel").text("Power Level:"+inventory[clickeditemid].powerlevel);
 
 });
+
+
+
+//MY ASSISTCHAR CLICK
+$(".slot2").click(function() {
+
+  clickedcharid = this.id; // this selects the item id so it can be used for other things in the menu
+
+  // $('td').children().removeClass("selected");
+  // $("#" + clickeditemid).children().addClass("selected");
+  // var rarityarr = [];
+
+  $("#info").empty();
+  $("#upgradeinfo").empty();
+  $("#powerlevel").empty();
+
+  // for (var y = 0; y < affixes.length; y++) {
+  //   var statstuff = inventory[clickeditemid]["stats"][affixes[y][0]];
+  //   var upgradestatstuff = inventory[clickeditemid]["upgrade"]["stats"][affixes[y][0]]
+  //   rarityarr.push(inventory[clickeditemid]["upgrade"]["stats"][affixes[y][0]][2] );
+  //   rarityarr.push(inventory[clickeditemid]["stats"][affixes[y][0]][2] );
+
+  //   if (y === 0) {
+  //     var namerarity = inventory[clickeditemid]["rarity"];
+  //     var clickeditemname = inventory[clickeditemid]["name"];
+
+  //     $("#info").append("<p class='" + namerarity + "'>" + clickeditemname + "</p><div class='line'></div>");
+  //     $("#upgradeinfo").html("<p> Upgrade stats:</p>");
+  $("#info").append("<img class= infocharimg '" assistcharacter[clickedcharid].imgname + "'>")
+  $("#info").append("<p>" + assistcharacter[clickedcharid]["description"] + "</p>")
+  $("#info").append("<p>" + assistcharacter[clickedcharid]["assisteffect"] + "</p>")
+    });
+
+
+
+
+
+
+
+
 
 //CHARACTER CLICK
 $(".slot1").click(function() {

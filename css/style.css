@@ -2704,8 +2704,8 @@ table {
 }
 
 .fire-demon {
-  width: 42px;
-  height: 42px;
+  min-width: 42px;
+  min-height: 42px;
   background-position: -42px 0;
 }
 
@@ -2739,4 +2739,34 @@ table {
   background-position: 0 -84px;
 }
 
+.infocharimg {
+  min-width: 96px;
+  min-height: 96px;
+  border-width: 3.5px;
+  border-style: solid;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+
+.fire-demon100{
+  background-image: url("../images/fire demon100.jpg")
+}
+.vampire100{
+  background-image: url("../images/vampire100.jpg")
+}
+.hydra100{
+  background-image: url("../images/hydra100.jpg")
+}
+.reaper100{
+  background-image: url("../images/reaper100.jpg")
+}
+.djinn100{
+  background-image: url("../images/djinn100.jpg")
+}
+.oni100{
+  background-image: url("../images/oni100.jpg")
+}
+.thor100{
+  background-image: url("../images/thor100.jpg")
+}
 
