@@ -1777,8 +1777,14 @@ $(".slot2").click(function() {
   //     var clickeditemname = inventory[clickeditemid]["name"];
 
   //     $("#info").append("<p class='" + namerarity + "'>" + clickeditemname + "</p><div class='line'></div>");
-  //     $("#upgradeinfo").html("<p> Upgrade stats:</p>");
-  $("#info").append("<img class= infocharimg '" assistcharacter[clickedcharid].imgname + "'>")
+  //     $("#upgradeinfo").html("<p>charimgclass</p>");
+  // var charimgclass = "infocharimg " + assistcharacter[clickedcharid].imgname
+  $("#info").append("<img class =infocharimg" + " id = " + assistcharacter[clickedcharid].imgname + ">")
+  // $("#info").append("<img class = infocharimg>")
+  // var allclasses1 = "item my-sprite " + inventory[invcount1]["icon"] + " " + inventory[invcount1]['rarity'];
+  // $(itemidcount1).append("<img id='" + itemid1 + "'class='" + allclasses1 + "' '></img>");
+
+
   $("#info").append("<p>" + assistcharacter[clickedcharid]["description"] + "</p>")
   $("#info").append("<p>" + assistcharacter[clickedcharid]["assisteffect"] + "</p>")
     });

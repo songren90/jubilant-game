@@ -2748,25 +2748,31 @@ table {
   margin: 0 auto;
 }
 
-.fire-demon100{
+#fire-demon100{
   background-image: url("../images/fire demon100.jpg")
 }
-.vampire100{
-  background-image: url("../images/vampire100.jpg")
+#vampire100{
+  background-image: url("../images/vampire100.jpg");
+  /* width: 96px;
+  min-height: 96px;
+  border-width: 3.5px;
+  border-style: solid;
+  vertical-align: middle;
+  margin: 0 auto; */
 }
-.hydra100{
+#hydra100{
   background-image: url("../images/hydra100.jpg")
 }
-.reaper100{
+#reaper100{
   background-image: url("../images/reaper100.jpg")
 }
-.djinn100{
+#djinn100{
   background-image: url("../images/djinn100.jpg")
 }
-.oni100{
+#oni100{
   background-image: url("../images/oni100.jpg")
 }
-.thor100{
+#thor100{
   background-image: url("../images/thor100.jpg")
 }
 
