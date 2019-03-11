@@ -15,6 +15,11 @@ html {
   margin-top: 5px;
 
 }
+
+#assistblock{
+  padding-top: 20px; 
+}
+
 .danger{
   color:red;
 }
@@ -124,7 +129,7 @@ position:absolute;
 #playerstats {
   padding: 5px;
   width: 222px;
-  height: 222px;
+  /* height: 222px; */
   background-color: #24303E;
   border: 0px solid #333;
 }
