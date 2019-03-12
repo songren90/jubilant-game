@@ -23,7 +23,7 @@ var player = {
   shoulder: {},
   book: {},
   glove: {},
-  partyMember: {},
+  firedemon: {},
 
   totalHealth: 0,
   totalMana: 0,
@@ -386,7 +386,17 @@ var inventory = {
   i25: {},
   i26: {},
   i27: {},
-}
+};
+
+var assistinventory = {
+  ai1: {},
+  ai2: {},
+  ai3: {},
+  ai4: {},
+  ai5 :{},
+  ai6: {},
+  ai7: {},
+};
 
 
 var mouseX;
@@ -435,6 +445,8 @@ updatespells();
       setTimeout (removebuff, object.buffduration);
 
     }
+
+    // Depending on assist char equipped, do something
 
     if (object.damage > 0 ){
       var critroll = Math.floor(Math.random() * (100 - Critical)) + 1;
@@ -1645,6 +1657,9 @@ $("#sell").click(function() {
 
   sell();
 });
+
+
+
 $("#equip").click(function() {
 
   function equip() {
