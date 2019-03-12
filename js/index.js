@@ -324,9 +324,8 @@ var assistcharacter = {
 };
 var itemname = "";
 var assistname = "";
-var itemslotnames = ["Vampire","Hydra"];
-var assistslotnames = ["Vampire-2","Hydra-2","Fire-Demon","Thor","Djinn","Reaper","Oni"];
-var slotplayernames = ["vampire", "hydra"];
+var itemslotnames = ["Talisman", "Helmet", "Ring", "Shoulders", "Chestplate", "Book", "Bracelet", "Leggings", "Gloves", "Weapon", "Boots", "Necklace"];
+var slotplayernames = ["talisman", "head", "ring", "shoulder", "chest", "book", "wrist", "leg", "glove", "weapon", "boot", "necklace"];
 var itemslot = 0;
 var generateditem = {};
 var rarities = ["Fighter", "Champion", "Psychic", "Mage", "Grand Wizard"];
