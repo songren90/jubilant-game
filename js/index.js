@@ -285,7 +285,11 @@ var assistcharacter = {
     name: "Fire Demon",
     imgname:"fire-demon100",
     description: "A mighty fire demon",
-    assisteffect: "Effect : 20% BloodDMG Increase"
+    assisteffect: "Effect : 35% FireDMG Increase",
+    slot: "firedemon",
+    totalstats:{
+      FireDMG : player[totalFireDMG] * 1.35
+    }
 
   },
   "charid4":{
@@ -1886,6 +1890,8 @@ $(".slot1").mousedown(function(e) {
     });
   }
 });
+
+// START HERE
 
 
 
