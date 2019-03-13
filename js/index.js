@@ -1692,7 +1692,17 @@ $("#equip").click(function() {
 
 });
 
+
+// assist char image disappears once several different char are added.
+//  should reappear in old box once new char has been added.  
 $("#addassist").click(function(){
+
+  if (player[assistslot]){
+     assistinventory[clickeditemid] = player[assistslot]
+  };
+
+  player[assistslot] = {};
+  $("#assistslot").empty();
 
   var assistslot = assistinventory[clickeditemid]["slot"];
 
@@ -1700,17 +1710,7 @@ $("#addassist").click(function(){
   // $("#" + clickeditemid).empty;
   player[assistslot] = assistinventory[clickeditemid];
   inventory[clickeditemid] = {};
-}
-
-
-
-
-
-
 });
-
-
-
 
 
 $("#fightbutton").click(function(){
@@ -2030,6 +2030,7 @@ setInterval(save, 10000);
 window.onload = function() {
   load();
   }
+
 
 
 }); // doc rdy
