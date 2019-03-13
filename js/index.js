@@ -280,18 +280,18 @@ var assistcharacter = {
     assisteffect: "Effect : 20% BloodDMG Increase"
 
   },
-  "charid3":{
-    id: 3,
-    name: "Fire Demon",
-    imgname:"fire-demon100",
-    description: "A mighty fire demon",
-    assisteffect: "Effect : 35% FireDMG Increase",
-    slot: "firedemon",
-    totalstats:{
-      FireDMG : player[totalFireDMG] * 1.35
-    }
+  // "charid3":{
+  //   id: 3,
+  //   name: "Fire Demon",
+  //   imgname:"fire-demon100",
+  //   description: "A mighty fire demon",
+  //   assisteffect: "Effect : 35% FireDMG Increase",
+  //   slot: "firedemon",
+  //   totalstats:{
+  //     FireDMG : player["totalFireDMG"] * 1.35
+  //   }
 
-  },
+  // },
   "charid4":{
     id: 4,
     name: "Thor",
@@ -388,17 +388,25 @@ var inventory = {
   i24: {},
   i25: {},
   i26: {},
-  i27: {},
+  i27: {}
 };
 
 var assistinventory = {
-  ai1: {},
-  ai2: {},
-  ai3: {},
-  ai4: {},
-  ai5 :{},
-  ai6: {},
-  ai7: {},
+  charid1: {},
+  charid2: {},
+  charid3: {    
+  name: "Fire Demon",
+  imgname:"fire-demon100",
+  description: "A mighty fire demon",
+  assisteffect: "Effect : 35% FireDMG Increase",
+  slot: "firedemon",
+  stats:{
+    FireDMG : player["totalFireDMG"] * 1.35
+  }},
+  charid4: {},
+  charid5: {},
+  charid6: {},
+  charid7: {}
 };
 
 
@@ -1615,6 +1623,8 @@ $("#main").click(function() {
 
 });
 
+
+
 $("#sellall").click(function(){
  function clicked() {
 
@@ -1667,8 +1677,8 @@ $("#equip").click(function() {
 
   function equip() {
     var equipslot = inventory[clickeditemid]["slot"];
-
     if ($.isEmptyObject(player[equipslot])) {
+      
       $("#" + clickeditemid).children().appendTo("#" + equipslot);
       $("#" + clickeditemid).empty();
       // now to delete and transfer data
@@ -1681,6 +1691,25 @@ $("#equip").click(function() {
   countplayerstats();
 
 });
+
+$("#addassist").click(function(){
+
+  var assistslot = assistinventory[clickeditemid]["slot"];
+
+  $("#" + clickeditemid).children().appendTo("#assistslot");
+  // $("#" + clickeditemid).empty;
+  player[assistslot] = assistinventory[clickeditemid];
+  inventory[clickeditemid] = {};
+}
+
+
+
+
+
+
+});
+
+
 
 
 

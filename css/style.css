@@ -23,6 +23,19 @@ html {
 .danger{
   color:red;
 }
+
+#addassistdiv{
+  padding-top:2px;
+  margin:0 auto;
+  margin-top:10px;
+}
+
+#addassist{
+  margin:0 auto;
+  width:300px;
+}
+
+
 #sellalldiv{
 padding-top:2px;
 margin:0 auto;
