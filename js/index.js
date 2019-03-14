@@ -23,7 +23,7 @@ var player = {
   shoulder: {},
   book: {},
   glove: {},
-  firedemon: {},
+  assistslot: {},
 
   totalHealth: 0,
   totalMana: 0,
@@ -392,22 +392,80 @@ var inventory = {
 };
 
 var assistinventory = {
-  charid1: {},
-  charid2: {},
+  charid1: {
+    name: "Vampire",
+    imgname: 'vampire100',
+    description: "A mighty vampire",
+    assisteffect: "Effect : 20% BloodDMG Increase",
+    // slot: "assistslot",
+    stats:{
+      FireDMG : player["totalBloodDMG"] * 1.2
+    }
+  },
+  charid2: {
+    name: "Hydra",
+    imgname:"hydra100",
+    description: "A mighty hydra",
+    assisteffect: "Effect : 25% IceDMG Increase",
+    // slot: "firedemon",
+    stats:{
+      IceDMG : player["totalIceDMG"] * 1.25
+    }
+  },
   charid3: {    
   name: "Fire Demon",
   imgname:"fire-demon100",
   description: "A mighty fire demon",
   assisteffect: "Effect : 35% FireDMG Increase",
-  slot: "firedemon",
+  // slot: "firedemon",
   stats:{
     FireDMG : player["totalFireDMG"] * 1.35
-  }},
-  charid4: {},
-  charid5: {},
-  charid6: {},
-  charid7: {}
-};
+  }
+  },
+  charid4: {
+    name: "Thor",
+    imgname:"thor100",
+    description: "A thunder God",
+    assisteffect: "Effect : 30% StormDMG Increase \n Critical Increase by 10",
+    // slot: "firedemon",
+    stats:{
+      StormDMG : player["totalStormDMG"] * 1.3, 
+      Critical : player["Critical"] + 10  
+      }
+  },
+  charid5: {
+    name: "Djinn",
+    imgname:"djinn100",
+    description: "A mighty magic genie",
+    assisteffect: "Effect : 45% ShadowDMG Increase",
+    // slot: "firedemon",
+    stats:{
+      ShadowDMG : player["totalShadowDMG"] * 1.45
+    }
+  },
+  charid6: {
+    name: "Reaper",
+    imgname:"reaper100",
+    description: "A mighty reaper",
+    assisteffect: "Effect : 30% NatureDMG Increase \n 30% Heal Increase \n 15% Lifesteal Increase",
+    // slot: "firedemon",
+    stats:{
+      NatureDMG : player["totalNatureDMG"] * 1.3,
+      HealPow: player["HealPow"] * 1.3,
+      Lifesteal: player["totalLifesteal"] * 1.15
+    }
+  },
+  charid7: {    
+    name: "Oni",
+    imgname:"oni100",
+    description: "???",
+    assisteffect: "Effect : 20% Damage Increase \n 20% MagicPow Increase"},
+    // slot: "firedemon",
+    stats:{
+      Damage : player["totalDamage"] * 1.2,
+      MagicPow: player["totalMagicPow"] * 1.2
+    }
+  };
 
 
 var mouseX;
@@ -1697,11 +1755,12 @@ $("#equip").click(function() {
 //  should reappear in old box once new char has been added.  
 $("#addassist").click(function(){
 
-  if (player[assistslot]){
-     assistinventory[clickeditemid] = player[assistslot]
-  };
+  // if (player[assistslot] != {}){
+  //   assistinventory[clickeditemid] = player[assistslot]
+  //   $(player[assistslot]).children().appendTo("#charid2");
+  // };
 
-  player[assistslot] = {};
+  // player[assistslot] = {};
   $("#assistslot").empty();
 
   var assistslot = assistinventory[clickeditemid]["slot"];
@@ -1709,7 +1768,7 @@ $("#addassist").click(function(){
   $("#" + clickeditemid).children().appendTo("#assistslot");
   // $("#" + clickeditemid).empty;
   player[assistslot] = assistinventory[clickeditemid];
-  inventory[clickeditemid] = {};
+  // inventory[clickeditemid] = {};
 });
 
 
