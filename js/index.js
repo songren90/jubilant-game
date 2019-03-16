@@ -1755,12 +1755,13 @@ $("#equip").click(function() {
 //  should reappear in old box once new char has been added.  
 $("#addassist").click(function(){
 
-  // if (player[assistslot] != {}){
-  //   assistinventory[clickeditemid] = player[assistslot]
+  if (player[assistslot]["children"]){
+    $("#assistslot").children().appendTo(player[assistslot]["children"]["id"]);
+    // append to char id 1 ,2 ,3 ,4 etc
   //   $(player[assistslot]).children().appendTo("#charid2");
-  // };
+  };
 
-  // player[assistslot] = {};
+ 
   $("#assistslot").empty();
 
   var assistslot = assistinventory[clickeditemid]["slot"];
