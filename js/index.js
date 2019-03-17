@@ -393,6 +393,7 @@ var inventory = {
 
 var assistinventory = {
   charid1: {
+    id: 1,
     name: "Vampire",
     imgname: 'vampire100',
     description: "A mighty vampire",
@@ -403,6 +404,7 @@ var assistinventory = {
     }
   },
   charid2: {
+    id: 2,
     name: "Hydra",
     imgname:"hydra100",
     description: "A mighty hydra",
@@ -412,17 +414,19 @@ var assistinventory = {
       IceDMG : player["totalIceDMG"] * 1.25
     }
   },
-  charid3: {    
-  name: "Fire Demon",
-  imgname:"fire-demon100",
-  description: "A mighty fire demon",
-  assisteffect: "Effect : 35% FireDMG Increase",
-  // slot: "firedemon",
-  stats:{
-    FireDMG : player["totalFireDMG"] * 1.35
-  }
+  charid3: {
+    id: 3,    
+    name: "Fire Demon",
+    imgname:"fire-demon100",
+    description: "A mighty fire demon",
+    assisteffect: "Effect : 35% FireDMG Increase",
+    // slot: "firedemon",
+    stats:{
+      FireDMG : player["totalFireDMG"] * 1.35
+    }
   },
   charid4: {
+    id: 4,
     name: "Thor",
     imgname:"thor100",
     description: "A thunder God",
@@ -434,6 +438,7 @@ var assistinventory = {
       }
   },
   charid5: {
+    id: 5,
     name: "Djinn",
     imgname:"djinn100",
     description: "A mighty magic genie",
@@ -444,6 +449,7 @@ var assistinventory = {
     }
   },
   charid6: {
+    id: 6,
     name: "Reaper",
     imgname:"reaper100",
     description: "A mighty reaper",
@@ -455,7 +461,8 @@ var assistinventory = {
       Lifesteal: player["totalLifesteal"] * 1.15
     }
   },
-  charid7: {    
+  charid7: {
+    id: 7,    
     name: "Oni",
     imgname:"oni100",
     description: "???",
@@ -1755,8 +1762,8 @@ $("#equip").click(function() {
 //  should reappear in old box once new char has been added.  
 $("#addassist").click(function(){
 
-  if (player[assistslot]["children"]){
-    $("#assistslot").children().appendTo(player[assistslot]["children"]["id"]);
+  if (typeof player[assistslot]["name"] !== 'undefined'){
+    $("#assistslot").children().appendTo("#" + player[assistslot]["children"]["id"]);
     // append to char id 1 ,2 ,3 ,4 etc
   //   $(player[assistslot]).children().appendTo("#charid2");
   };
