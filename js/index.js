@@ -1149,7 +1149,7 @@ function createitem() {
 }
 
 
-//so right click doesn't fuck up my options menu
+//so right click doesn't mess up my options menu
 document.oncontextmenu = function() {
   return false;
 };
